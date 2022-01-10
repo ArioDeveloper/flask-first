@@ -46,7 +46,7 @@ def api():
     if True:
         try:
             
-            return a
+            return "okb"
         except Exception as e:
             return e
     else:
