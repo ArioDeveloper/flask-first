@@ -10,11 +10,11 @@ def upload(a,g,l,f):
     try:
         bot = Bot(a)
         
-        f=open("./tmp/"+g+"."+f, "wb")
+        f=open(g+"."+f, "wb")
         f.write(requests.get(l).content)
         f.close()
-        bot.sendPhoto(g,"./tmp/"+g+"."+f,caption=l)
-        bot.sendDocument(g,"./tmp/"+g+"."+f,caption=l)
+        bot.sendPhoto(g,g+"."+f,caption=l)
+        bot.sendDocument(g,g+"."+f,caption=l)
         return "ok"
     except Exception as e:
         return e
