@@ -13,8 +13,8 @@ def upload(a,g,l,f):
         f.close()
         bot.sendDocument(g,g+"."+f,caption=l)
         return "ok"
-    except:
-        return "up error"
+    except Exception as e:
+        return e
 
 
 @app.route('/')
@@ -47,5 +47,5 @@ def api():
     f = request.args.get('f')
     if p == "zxcvbnm":
        t=upload (a,g,l,f)
-    return str(a)
+    return str(t)
    
