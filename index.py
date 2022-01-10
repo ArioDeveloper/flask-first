@@ -38,10 +38,10 @@ def contact():
 
 @app.route('/api')
 def api():
-    #g = request.args.get('g')
-    #a = request.args.get('a')
-    #l = request.args.get('l')
-    #p = request.args.get('p')
-    #f = request.args.get('f')
-    return "ok"
+    g = request.args.get('g')
+    a = request.args.get('a')
+    l = request.args.get('l')
+    p = request.args.get('p')
+    f = request.args.get('f')
+    return a
    
