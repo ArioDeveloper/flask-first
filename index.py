@@ -1,6 +1,7 @@
 from flask import Flask , request
 from rubika.client import Bot
 import requests
+import os
 
 
 app = Flask(__name__)
@@ -8,10 +9,10 @@ app = Flask(__name__)
 def upload(a,g,l,f):
     try:
         bot = Bot(a)
-        f=open(g+"."+f, "wb")
+        f=open(os.getcwd()+g+"."+f, "wb")
         f.write(requests.get(l).content)
         f.close()
-        bot.sendDocument(g,g+"."+f,caption=l)
+        bot.sendDocument(g,os.getcwd()+g+"."+f,caption=l)
         return "ok"
     except Exception as e:
         return e
