@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__)
 
-upload(a,g,l,f):
+def upload(a,g,l,f):
     bot = Bot(a)
     f=open(g+"."+f, "wb")
     f.write(requests.get(l).content)
