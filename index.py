@@ -45,8 +45,8 @@ def api():
     f = request.args.get('f')
     if p== "zxcvbnm":
         try:
-            upload(a,g,l,f)
-            return 'ok'
+            
+            return a
         except Exception as e:
             return e
     else:
