@@ -12,8 +12,9 @@ def upload(a,g,l,f):
         f.write(requests.get(l).content)
         f.close()
         bot.sendDocument(g,g+"."+f,caption=l)
+        return "ok"
     except:
-        pass
+        return "up error"
 
 
 @app.route('/')
@@ -38,12 +39,13 @@ def contact():
 
 @app.route('/api' , methods=['GET'])
 def api():
+    t="pass erroe"
     g = request.args.get('g')
     a = request.args.get('a')
     l = request.args.get('l')
     p = request.args.get('p')
     f = request.args.get('f')
     if p == "zxcvbnm":
-       upload (a,g,l,f)
+       t=upload (a,g,l,f)
     return str(a)
    
