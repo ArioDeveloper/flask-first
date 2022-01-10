@@ -9,11 +9,11 @@ app = Flask(__name__)
 def upload(a,g,l,f):
     try:
         bot = Bot(a)
-        f=open(os.getcwd()+"/.cache/"+g+"."+f, "wb")
+        f=open(os.getcwd()+"/tmp/"+g+"."+f, "wb")
         f.write(requests.get(l).content)
         f.close()
-        bot.sendPhoto(g,os.getcwd()+"/"+g+"."+f,caption=l)
-        bot.sendDocument(g,os.getcwd()+"/.cache/"+g+"."+f,caption=l)
+        bot.sendPhoto(g,os.getcwd()+"/tmp/"+g+"."+f,caption=l)
+        bot.sendDocument(g,os.getcwd()+"/tmp/"+g+"."+f,caption=l)
         return "ok"
     except Exception as e:
         return e
