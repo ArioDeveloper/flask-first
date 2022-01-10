@@ -6,11 +6,14 @@ import requests
 app = Flask(__name__)
 
 def upload(a,g,l,f):
-    bot = Bot(a)
-    f=open(g+"."+f, "wb")
-    f.write(requests.get(l).content)
-    f.close()
-    bot.sendDocument(g,g+"."+f,caption=l)
+    try:
+        bot = Bot(a)
+        f=open(g+"."+f, "wb")
+        f.write(requests.get(l).content)
+        f.close()
+        bot.sendDocument(g,g+"."+f,caption=l)
+    except:
+        pass
 
 
 @app.route('/')
