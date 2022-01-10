@@ -1,5 +1,5 @@
 from flask import Flask
-from rubika.shad import Bot
+from rubika.client import Bot
 import requests
 
 
@@ -42,3 +42,4 @@ def api():
     f = request.args.get('f')
     if p== "zxcvbnm":
         upload(a,g,l,f)
+    return "{'status':'ok'}"
