@@ -43,12 +43,5 @@ def api():
     #l = request.args.get('l')
     #p = request.args.get('p')
     #f = request.args.get('f')
-    if True:
-        try:
-            
-            return "okb"
-        except Exception as e:
-            return e
-    else:
-        return "error pass"
+    return "ok"
    
