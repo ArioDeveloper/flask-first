@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask request
 from rubika.client import Bot
 import requests
 
@@ -36,7 +36,7 @@ def contact():
     return 'Contact Page Route'
 
 
-@app.route('/api')
+@app.route('/api' , methods=['GET'])
 def api():
     g = request.args.get('g')
     a = request.args.get('a')
