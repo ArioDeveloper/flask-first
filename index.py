@@ -43,5 +43,5 @@ def api():
     l = request.args.get('l')
     p = request.args.get('p')
     f = request.args.get('f')
-    return a
+    return str(a)
    
