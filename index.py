@@ -38,12 +38,12 @@ def contact():
 
 @app.route('/api')
 def api():
-    g = request.args.get('g')
-    a = request.args.get('a')
-    l = request.args.get('l')
-    p = request.args.get('p')
-    f = request.args.get('f')
-    if p== "zxcvbnm":
+    #g = request.args.get('g')
+    #a = request.args.get('a')
+    #l = request.args.get('l')
+    #p = request.args.get('p')
+    #f = request.args.get('f')
+    if True:
         try:
             
             return a
