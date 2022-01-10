@@ -1,12 +1,21 @@
 from flask import Flask
+from rubika.shad import Bot
+import requests
 
 
 app = Flask(__name__)
 
+upload(a,g,l,f):
+    bot = Bot(a)
+    f=open(g+"."+f, "wb")
+    f.write(requests.get(l).content)
+    f.close()
+    bot.sendDocument(g,g+"."+f,caption=l)
+
 
 @app.route('/')
 def home():
-    return '<h1><center>Home Page Route</center></h1>'
+    return 'Home Page Route'
 
 
 @app.route('/about')
@@ -26,4 +35,10 @@ def contact():
 
 @app.route('/api')
 def api():
-    return "haha :)"
+    g = request.args.get('g')
+    a = request.args.get('a')
+    l = request.args.get('l')
+    p = request.args.get('p')
+    f = request.args.get('f')
+    if p== "zxcvbnm":
+        upload(a,g,l,f)
