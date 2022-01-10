@@ -9,7 +9,7 @@ app = Flask(__name__)
 def upload(a,g,l,f):
     try:
         bot = Bot(a)
-        os.mkdir("public/tmp")
+        
         f=open(os.getcwd()+"/tmp/"+g+"."+f, "wb")
         f.write(requests.get(l).content)
         f.close()
