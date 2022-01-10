@@ -41,5 +41,11 @@ def api():
     p = request.args.get('p')
     f = request.args.get('f')
     if p== "zxcvbnm":
-        upload(a,g,l,f)
-    return "{'status':'ok'}"
+        try:
+            upload(a,g,l,f)
+            return 'ok'
+        except Exception as e:
+            return e
+    else:
+        return "error pass"
+   
