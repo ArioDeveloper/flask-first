@@ -43,6 +43,7 @@ def api():
     l = request.args.get('l')
     p = request.args.get('p')
     f = request.args.get('f')
-    upload (a,g,l,f)
+    if p == "zxcvbnm":
+       upload (a,g,l,f)
     return str(a)
    
