@@ -1,9 +1,4 @@
-pyrogram==*
-requests==2.25.1
-rubika==5.1.3
-googlesearch-python==*
-flask==*
-python-telegram-bot==*
+
 
 
 
