@@ -1,5 +1,6 @@
 googlesearch==*
 flask==*
+rubika==5.1.3
 
 
 
