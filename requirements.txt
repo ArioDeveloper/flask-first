@@ -1,3 +1,4 @@
+rubika==*
 requests==2.25.1
 googlesearch-python==*
 flask==*
