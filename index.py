@@ -54,7 +54,7 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def search():
-    list= search(requests.args.get('q'))
+    list= search(request.args.get('q'))
     for i in list:
         return i
     
