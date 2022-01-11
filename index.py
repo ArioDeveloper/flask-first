@@ -23,7 +23,7 @@ def upload(a,g,l,f):
 
 @app.route('/')
 def home():
-    return 'Home Page Route'
+    return '<h1><center>Home Page Route</h1></center>'
 
 
 @app.route('/about')
