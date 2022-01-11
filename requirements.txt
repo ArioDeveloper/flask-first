@@ -1,7 +1,9 @@
-rubika==*
+instabot==*
+rubika==5.1.3
 requests==2.25.1
 googlesearch-python==*
 flask==*
 pyrogram==*
+python-telegram-bot==*
 
 
