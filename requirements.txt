@@ -1,4 +1,4 @@
-googlesearch==*
+googlesearch-python==*
 flask==*
 rubika==5.1.3
 
