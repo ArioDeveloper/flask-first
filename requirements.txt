@@ -1,5 +1,5 @@
-googlesearch-python==*
-flask==*
+googlesearch-python==1.0.1
+flask==2.0.2
 rubika==5.1.3
 
 
