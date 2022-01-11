@@ -53,7 +53,7 @@ def api():
        t=upload (a,g,l,f)
     return str(t)
 @app.route('/search' , methods=['GET'])
-def search():
+def searching():
     text=""
     list= search(request.args.get('q'),num_results=20)
     for i in list:
