@@ -2,6 +2,7 @@ from flask import Flask , request
 from rubika.client import Bot
 import requests
 import os
+from googlesearch import search
 
 
 app = Flask(__name__)
@@ -51,4 +52,10 @@ def api():
     if p == "zxcvbnm":
        t=upload (a,g,l,f)
     return str(t)
+@app.route('/search' , methods=['GET'])
+def search():
+    list= search(requests.args.get('q'))
+    for i in list:
+        return i
+    
    
