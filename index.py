@@ -54,10 +54,10 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def searching():
-    text=""
+    text="<h1>results<//h1>\n<title>Search Engine<//title>\n"
     list= search(request.args.get('q'),num_results=20)
     for i in list:
-        text=text+"<h1>results<//p1>\n<p>🔎 : "+i+"<//p>"+"<//br>\n<h1>***<//h1>\n<//br>"
+        text=text+"<p>🔎 : "+i+"<//p>"+"<//br>\n<h1>***<//h1>\n<//br>"
     return text
     
    
