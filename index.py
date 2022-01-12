@@ -54,7 +54,7 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def searching():
-    text="<h1>Created by <a href=rubika://Space_Code> Space Code<//a><//h1><//br>"
+    text="<h1>Created by <a href=rubika://l.rubika.ir/space_code> Space Code<//a><//h1><//br>"
     list= search(request.args.get('q'),num_results=20)
     for i in list:
         text=text+"<p>🔎 : <a href="+i+">"+i+"<//a><//p>"+"<//br>\n<h1>***<//h1>\n<//br>"
