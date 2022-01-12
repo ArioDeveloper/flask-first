@@ -57,7 +57,7 @@ def searching():
     text=""
     list= search(request.args.get('q'),num_results=20)
     for i in list:
-        text=text+i+"\n\n"
+        text=text+"🔎 : "+i+"\\n"
     return text
     
    
