@@ -57,7 +57,7 @@ def searching():
     text=""
     list= search(request.args.get('q'),num_results=20)
     for i in list:
-        text=text+"<p>🔎 : "+i+"<//p>"+"<//br><bold>***<//bold><//br>"
+        text=text+"<h1>results</p1>\n<p>🔎 : "+i+"<//p>"+"<//br>\n<h1>***<//h1>\n<//br>"
     return text
     
    
