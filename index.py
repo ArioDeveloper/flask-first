@@ -54,10 +54,7 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def searching():
-    text="<h1>Results<//h1><//br>"
-    list= search(request.args.get('q'),num_results=20)
-    for i in list:
-        text=text+"<p>🔎 : <a href="+i+">"+i+"<//a><//p>"+"<//br><h1>***<//h1><//br>"
+    text="<h1>disabled<//h1><//br>"
     return text
     
    
