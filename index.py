@@ -1,4 +1,4 @@
-from flask import Flask , request
+from flask import Flask , request , jsonify
 from rubika.client import Bot
 import requests
 import os
@@ -54,7 +54,7 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def searching():
-    text="<h1>disabled<//h1><//br>"
-    return text
+    list=search(request.args.get('q'),num_result=30)
+    return jsonify(list)
     
    
