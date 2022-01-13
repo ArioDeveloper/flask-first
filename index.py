@@ -54,7 +54,7 @@ def api():
     return str(t)
 @app.route('/search' , methods=['GET'])
 def searching():
-    list=search(request.args.get('q'),num_result=30)
+    list=search(request.args.get('q'),num_results=30)
     return jsonify(list)
     
    
