@@ -26,7 +26,7 @@ def home():
     return '<h1><center>Home Page Route</h1></center>'
 
 
-@app.route('/main)
+@app.route('/main')
 def about():
     r=requests.get("https://boiling-mountain-37861.herokuapp.com/main")
     return r.text
