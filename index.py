@@ -49,7 +49,7 @@ def file(path):
     file_like_object.write(r.content)
     file_like_object.seek(0)  # move to the beginning of file 
 
-    return send_file(file_like_object)
+    return send_file(file_like_object, mimetype = path.split(".")[-1])
 
  
 
