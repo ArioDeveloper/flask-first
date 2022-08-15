@@ -42,6 +42,15 @@ def image(path):
 
     return send_file(file_like_object, mimetype='image/png')
 
+@app.route('/file/<path:path>')
+def file(path):
+    r=requests.get(f"https://boiling-mountain-37861.herokuapp.com/file/{path}")
+    file_like_object = io.BytesIO()
+    file_like_object.write(r.content)
+    file_like_object.seek(0)  # move to the beginning of file 
+
+    return send_file(file_like_object)
+
  
 
 
