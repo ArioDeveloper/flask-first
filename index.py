@@ -33,7 +33,7 @@ def about():
 
 
 @app.route('/image/<path:path>')
-def image():
+def image(path):
     r=requests.get(f"https://boiling-mountain-37861.herokuapp.com/image/{path}")
     return r.content
 
