@@ -32,9 +32,10 @@ def about():
     return r.text
 
 
-@app.route('/portfolio')
-def portfolio():
-    return 'Portfolio Page Route'
+@app.route('/image/<path:path>')
+def image():
+    r=requests.get(f"https://boiling-mountain-37861.herokuapp.com/image/{path}")
+    return r.content
 
 
 @app.route('/contact')
