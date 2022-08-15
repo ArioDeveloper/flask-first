@@ -48,8 +48,11 @@ def file(path):
     file_like_object = io.BytesIO()
     file_like_object.write(r.content)
     file_like_object.seek(0)  # move to the beginning of file 
-
-    return send_file(file_like_object, mimetype = path.split(".")[-1])
+    if (path.split(".")[-1] == "png" or path.split(".")[-1] == "jpg"):
+        mim="image/png"
+    elif (path.split(".")[-1] == "mp4"):
+        mim="video/mp4"
+    return send_file(file_like_object, mimetype = mim)
 
  
 
