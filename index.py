@@ -97,17 +97,17 @@ def searching():
     
 @app.route('/file/<path:path>',methods = ['GET','POST'])
 def get_files(path):
-    con= sqlite3.connect('profi.db')
-    cur=con.cursor()
-    a=re.findall(r"(.*)\..*",path)[0]
-    cur.execute(f"SELECT dc FROM datas WHERE id= '{int(a)}'")
-    dc=cur.fetchall()[0]
-    dc =dc[0]+1
-    print(dc)
+    #con= sqlite3.connect('profi.db')
+    #cur=con.cursor()
+    #a=re.findall(r"(.*)\..*",path)[0]
+    #cur.execute(f"SELECT dc FROM datas WHERE id= '{int(a)}'")
+    #dc=cur.fetchall()[0]
+    #dc =dc[0]+1
+    #print(dc)
     #
-    cur.execute(f"UPDATE datas SET dc = '{dc}' WHERE id= '{int(a)}'")
-    con.commit()
-    con.close()
+    #cur.execute(f"UPDATE datas SET dc = '{dc}' WHERE id= '{int(a)}'")
+    #con.commit()
+    #con.close()
 
     """Download a file."""
     try:
