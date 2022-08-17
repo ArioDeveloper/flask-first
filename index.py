@@ -67,7 +67,7 @@ def api():
         cur.execute(f"SELECT *  FROM datas WHERE id= '{i}'")
         d=cur.fetchall()
         
-        smals.append(t2l(listMaker(d,8)))
+        smals.append(t2l(listMaker(d,5)))
         
     data["smals"] = smals
     
@@ -77,11 +77,11 @@ def api():
         cur.execute(f"SELECT * FROM datas WHERE c= '{i}'")
         d=cur.fetchall()
         
-        cs.append(t2l(listMaker(d,8)))
+        cs.append(t2l(listMaker(d,5)))
         cur.execute(f"SELECT * FROM categorys WHERE id= '{i}'")
         d=cur.fetchall()
         
-        cn.append(t2l(listMaker(d,8)))
+        cn.append(t2l(listMaker(d,5)))
         
         
     data["cs"]=cs
