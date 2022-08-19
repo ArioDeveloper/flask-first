@@ -8,7 +8,7 @@ import re
 app = Flask(__name__)
 
 mainHale={"big":1,"bigLink":["c1","ng://negare.ng/d/1"], "smalls":[3,4 ],
-                      "cs":[2,7,6,3,1]}
+                      "cs":[2,7,6,3,2]}
 
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = "files/"
