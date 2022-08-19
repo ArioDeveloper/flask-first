@@ -121,7 +121,7 @@ def get_images(path):
 
     """Download a file."""
     try:
-        return send_from_directory("", "files/"+path, as_attachment=True)
+        return send_from_directory("", "files/"+"t"+path, as_attachment=True)
     except FileNotFoundError:
         abort(404)
         
