@@ -22,7 +22,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def home():
-    return '<h1><center>Home Page Route</h1></center>'
+    return '<h1><center>Home.... Page Route</h1></center>'
 
 @app.route("/set",methods=["post"])
 def set():
